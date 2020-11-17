@@ -36,7 +36,6 @@ public class AuthController
     public Token login( @RequestBody User login )
         throws ServletException
     {
-
         String jwtToken;
 
         if ( login.getEmail() == null || login.getPassword() == null )

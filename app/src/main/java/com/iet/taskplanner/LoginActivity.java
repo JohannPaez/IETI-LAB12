@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.iet.taskplanner.model.User;
 import com.iet.taskplanner.services.AuthService;
 
@@ -41,12 +42,12 @@ public class LoginActivity extends AppCompatActivity {
         EditText passwordText = findViewById(R.id.idActivity_LoginPassword);
         User user = new User(emailText.getText().toString(), passwordText.getText().toString());
         executorService.execute(() -> {
-            login(user);
+            login(user, view);
         });
 
     }
 
-    private void login(User user) {
+    private void login(User user, View view) {
         try {
             String token = authService.getToken(user).execute().body().getAccessToken();
             SharedPreferences sharedPref =
@@ -59,6 +60,8 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         } catch (Exception e) {
             e.printStackTrace();
+            Snackbar.make(view, "Incorrect username or password, please try again!", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
         }
     }
 }

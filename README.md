@@ -1,3 +1,27 @@
+# IETI-LAB12
+
+## Enunciado
+La guía del laboratorio está disponible [aquí](https://github.com/ieti-eci/3.2-android-secure-rest-api).
+
+## Datos de Logeo
+
+**Correo**: test@mail.com
+
+**Contraseña**: password
+
+**Nota**: Se deben utilizar estos datos de logeo, con el proyecto backendo corriendo al tiempo.
+
+### Demostración
+
+ <img src="images/UserWrong.png" width="270" height="540"/>
+ <img src="images/UserWell.png" width="270" height="540"/>
+ <img src="images/Login.png" width="270" height="540"/>
+ <img src="images/Login2.png" width="270" height="540"/>
+ 
+## Autor
+Johann Sebastian Páez Campos - Laboratorio 12 IETI 19/11/2020
+
+
 # 3.2 Android Secure REST API
 
 
